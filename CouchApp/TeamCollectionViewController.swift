@@ -52,13 +52,10 @@ class TeamCollectionViewController: UICollectionViewController {
     
     // #pragma mark - Segues
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if segue.identifier == "showRoster" {
-            let indexPath = collectionView.indexPathForItemAtPoint(<#point: CGPoint#>)
-            println(items)
-            println(indexPath)
-            let team = items[indexPath.endIndex] as Team
-            
+            let indexPath = collectionView.indexPathForCell(sender as UICollectionViewCell!)
+            let team = items[indexPath.row] as Team
             (segue.destinationViewController as PlayerTableViewController).detailItem = team
         }
     }
