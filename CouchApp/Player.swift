@@ -1,34 +1,24 @@
 //
-//  Team.swift
+//  Player.swift
 //  CouchApp
 //
-//  Created by Lap on 2014-07-21.
+//  Created by Lap on 2014-07-22.
 //  Copyright (c) 2014 Lap. All rights reserved.
 //
+
 import Foundation
 
-class Team {
+class Player {
     
-    var type : String?
-    var city : String?
-    var name : String?
-    var location : String?
-    var division : String?
-    var conference : String?
+    var given_name : String?
     
-    init(dict: Dictionary<String,String>) {
-        type = dict["type"] as? String
-        city = dict["city"] as? String
-        name = dict["name"] as? String
-        location = dict["location"] as? String
-        division = dict["division"] as? String
-        conference = dict["conference"] as? String
+    init(data: Dictionary<String,AnyObject>) {
+        given_name = data["given_name"]! as? String
     }
     
-    class func setObjectsWithConferenceWithClosure(conference: String,closure: ((data:[AnyObject]) -> ())?) {
-        let url = NSURL(string: "http://127.0.0.1:5984/salarize/_design/api/_view/teams?include_docs=true")
+    class func setObjectsWithTeamWithClosure(team: String,closure: ((data:[AnyObject]) -> ())?) {
+        let url = NSURL(string: "http://127.0.0.1:5984/salarize/_design/api/_view/roster?key=%22\(team)%22&include_docs=true")
         setObjectsWithURLWithClosure(url, { closure }())
-        
     }
     
     class func setObjectsWithURLWithClosure(url: NSURL, closure: ((data:[AnyObject]) -> ())?) {
@@ -49,20 +39,22 @@ class Team {
             }
             else {
                 let results : NSArray = json["rows"] as NSArray
+                
                 if results.count > 0 {
                     var objects : [AnyObject] = []
                     for each : AnyObject in results {
-                        if let dict = each["doc"] as? Dictionary<String,String> {
-                            var object = Team(dict: dict)
+                        if let doc = each["doc"]! as? Dictionary<String,AnyObject> {
+                            var object = Player(data:doc)
                             objects.append(object)
                         }
                     }
                     dispatch_async(dispatch_get_main_queue(), {
                         closure!(data:objects)
-                    })
+                        })
                 }
             }
-        
+            
             }).resume()
     }
+    
 }

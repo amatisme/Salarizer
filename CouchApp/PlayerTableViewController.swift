@@ -1,16 +1,19 @@
 //
-//  TeamTableViewController.swift
+//  PlayerTableViewController.swift
 //  CouchApp
 //
-//  Created by Lap on 2014-07-20.
+//  Created by Lap on 2014-07-22.
 //  Copyright (c) 2014 Lap. All rights reserved.
 //
 
+import Foundation
+
 import UIKit
 
-class TeamTableViewController: UITableViewController {
+class PlayerTableViewController: UITableViewController {
     
     var items = [AnyObject]()
+    var detailItem: Team?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +22,16 @@ class TeamTableViewController: UITableViewController {
         let closure = {(data:[AnyObject]) -> () in
             self.items = data
             self.tableView.reloadData()
-            }
-        Team.setObjectsWithConferenceWithClosure("eastern",{ closure }())
+        }
+        
+        if let team = detailItem as? Team {
+            Player.setObjectsWithTeamWithClosure(team.city!, { closure }())
+            println(detailItem?.city)
+        }
+        else {
+            println("Gonna load all players")
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,10 +42,10 @@ class TeamTableViewController: UITableViewController {
     // #pragma mark - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showRoster" {
+        if segue.identifier == "showDetail" {
             let indexPath = self.tableView.indexPathForSelectedRow()
-            let team = items[indexPath.row] as Team
-            (segue.destinationViewController as PlayerTableViewController).detailItem = team
+            let object = items[indexPath.row] as Player
+            (segue.destinationViewController as SecondViewController).detailItem = object
         }
     }
     
@@ -53,19 +64,10 @@ class TeamTableViewController: UITableViewController {
         if !cell {
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         }
-        var team : Team = self.items[indexPath.row] as Team
-        if let city = team.city as? String {
-            if let name = team.name as? String {
-                cell!.textLabel.text = city.capitalizedString + " " + name.capitalizedString
-            }
+        var player : Player = self.items[indexPath.row] as Player
+        if let given_name = player.given_name as String! {
+            cell!.textLabel.text = given_name.capitalizedString
         }
-        if let conference = team.conference as? String {
-            if let division = team.division as? String {
-                cell!.detailTextLabel.text = conference.capitalizedString + " Conference, " + division.capitalizedString + " Division"
-            }
-        }
-        
         return cell
     }
 }
-    

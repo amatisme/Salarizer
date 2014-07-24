@@ -10,7 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
                             
-    var detailItem: Team? {
+    var detailItem: Player? {
         didSet {
             // Update the view.
             println(detailItem)

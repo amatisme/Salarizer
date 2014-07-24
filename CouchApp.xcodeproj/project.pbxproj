@@ -14,6 +14,10 @@
 		37081597197CA5590025BF4B /* CouchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37081596197CA5580025BF4B /* CouchAppTests.swift */; };
 		370815A5197CB0320025BF4B /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370815A4197CB0320025BF4B /* TeamTableViewController.swift */; };
 		37AA16EE197D6BE4006C5A9F /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA16ED197D6BE4006C5A9F /* Team.swift */; };
+		37D83BDF197EB59B005CAF97 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D83BDE197EB59B005CAF97 /* PlayerTableViewController.swift */; };
+		37D83BE1197EBD2E005CAF97 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D83BE0197EBD2E005CAF97 /* Player.swift */; };
+		37D83BE51980185D005CAF97 /* TeamCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D83BE41980185D005CAF97 /* TeamCollectionViewController.swift */; };
+		37D83BE719801C55005CAF97 /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D83BE619801C55005CAF97 /* TeamCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		37081596197CA5580025BF4B /* CouchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouchAppTests.swift; sourceTree = "<group>"; };
 		370815A4197CB0320025BF4B /* TeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		37AA16ED197D6BE4006C5A9F /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		37D83BDE197EB59B005CAF97 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
+		37D83BE0197EBD2E005CAF97 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		37D83BE41980185D005CAF97 /* TeamCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewController.swift; sourceTree = "<group>"; };
+		37D83BE619801C55005CAF97 /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,10 @@
 				3708157F197CA5580025BF4B /* Supporting Files */,
 				370815A4197CB0320025BF4B /* TeamTableViewController.swift */,
 				37AA16ED197D6BE4006C5A9F /* Team.swift */,
+				37D83BDE197EB59B005CAF97 /* PlayerTableViewController.swift */,
+				37D83BE0197EBD2E005CAF97 /* Player.swift */,
+				37D83BE41980185D005CAF97 /* TeamCollectionViewController.swift */,
+				37D83BE619801C55005CAF97 /* TeamCollectionViewCell.swift */,
 			);
 			path = CouchApp;
 			sourceTree = "<group>";
@@ -214,9 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D83BE51980185D005CAF97 /* TeamCollectionViewController.swift in Sources */,
+				37D83BDF197EB59B005CAF97 /* PlayerTableViewController.swift in Sources */,
 				37081586197CA5580025BF4B /* SecondViewController.swift in Sources */,
 				37AA16EE197D6BE4006C5A9F /* Team.swift in Sources */,
 				370815A5197CB0320025BF4B /* TeamTableViewController.swift in Sources */,
+				37D83BE719801C55005CAF97 /* TeamCollectionViewCell.swift in Sources */,
+				37D83BE1197EBD2E005CAF97 /* Player.swift in Sources */,
 				37081582197CA5580025BF4B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
