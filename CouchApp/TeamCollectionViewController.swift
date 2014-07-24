@@ -56,7 +56,7 @@ class TeamCollectionViewController: UICollectionViewController {
         if segue.identifier == "showRoster" {
             let indexPath = collectionView.indexPathForCell(sender as UICollectionViewCell!)
             let team = items[indexPath.row] as Team
-            (segue.destinationViewController as PlayerTableViewController).detailItem = team
+            (segue.destinationViewController as PlayerCollectionViewController).team = team
         }
     }
     

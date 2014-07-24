@@ -12,9 +12,10 @@
 		37081589197CA5580025BF4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37081587197CA5580025BF4B /* Main.storyboard */; };
 		3708158B197CA5580025BF4B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3708158A197CA5580025BF4B /* Images.xcassets */; };
 		37081597197CA5590025BF4B /* CouchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37081596197CA5580025BF4B /* CouchAppTests.swift */; };
-		370815A5197CB0320025BF4B /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370815A4197CB0320025BF4B /* TeamTableViewController.swift */; };
+		371FFB7F19818F040018C5B7 /* PlayerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FFB7E19818F040018C5B7 /* PlayerCollectionViewController.swift */; };
+		371FFB81198190FD0018C5B7 /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FFB80198190FD0018C5B7 /* PlayerCollectionViewCell.swift */; };
+		371FFB831981914F0018C5B7 /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FFB821981914F0018C5B7 /* PlayerDetailViewController.swift */; };
 		37AA16EE197D6BE4006C5A9F /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA16ED197D6BE4006C5A9F /* Team.swift */; };
-		37D83BDF197EB59B005CAF97 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D83BDE197EB59B005CAF97 /* PlayerTableViewController.swift */; };
 		37D83BE1197EBD2E005CAF97 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D83BE0197EBD2E005CAF97 /* Player.swift */; };
 		37D83BE51980185D005CAF97 /* TeamCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D83BE41980185D005CAF97 /* TeamCollectionViewController.swift */; };
 		37D83BE719801C55005CAF97 /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D83BE619801C55005CAF97 /* TeamCollectionViewCell.swift */; };
@@ -40,9 +41,10 @@
 		37081590197CA5580025BF4B /* CouchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37081595197CA5580025BF4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37081596197CA5580025BF4B /* CouchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouchAppTests.swift; sourceTree = "<group>"; };
-		370815A4197CB0320025BF4B /* TeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		371FFB7E19818F040018C5B7 /* PlayerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewController.swift; sourceTree = "<group>"; };
+		371FFB80198190FD0018C5B7 /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		371FFB821981914F0018C5B7 /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
 		37AA16ED197D6BE4006C5A9F /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		37D83BDE197EB59B005CAF97 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
 		37D83BE0197EBD2E005CAF97 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		37D83BE41980185D005CAF97 /* TeamCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewController.swift; sourceTree = "<group>"; };
 		37D83BE619801C55005CAF97 /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -92,12 +94,13 @@
 				37081587197CA5580025BF4B /* Main.storyboard */,
 				3708158A197CA5580025BF4B /* Images.xcassets */,
 				3708157F197CA5580025BF4B /* Supporting Files */,
-				370815A4197CB0320025BF4B /* TeamTableViewController.swift */,
 				37AA16ED197D6BE4006C5A9F /* Team.swift */,
-				37D83BDE197EB59B005CAF97 /* PlayerTableViewController.swift */,
 				37D83BE0197EBD2E005CAF97 /* Player.swift */,
 				37D83BE41980185D005CAF97 /* TeamCollectionViewController.swift */,
 				37D83BE619801C55005CAF97 /* TeamCollectionViewCell.swift */,
+				371FFB7E19818F040018C5B7 /* PlayerCollectionViewController.swift */,
+				371FFB80198190FD0018C5B7 /* PlayerCollectionViewCell.swift */,
+				371FFB821981914F0018C5B7 /* PlayerDetailViewController.swift */,
 			);
 			path = CouchApp;
 			sourceTree = "<group>";
@@ -227,13 +230,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D83BE51980185D005CAF97 /* TeamCollectionViewController.swift in Sources */,
-				37D83BDF197EB59B005CAF97 /* PlayerTableViewController.swift in Sources */,
+				371FFB7F19818F040018C5B7 /* PlayerCollectionViewController.swift in Sources */,
+				371FFB831981914F0018C5B7 /* PlayerDetailViewController.swift in Sources */,
 				37081586197CA5580025BF4B /* SecondViewController.swift in Sources */,
 				37AA16EE197D6BE4006C5A9F /* Team.swift in Sources */,
-				370815A5197CB0320025BF4B /* TeamTableViewController.swift in Sources */,
 				37D83BE719801C55005CAF97 /* TeamCollectionViewCell.swift in Sources */,
 				37D83BE1197EBD2E005CAF97 /* Player.swift in Sources */,
 				37081582197CA5580025BF4B /* AppDelegate.swift in Sources */,
+				371FFB81198190FD0018C5B7 /* PlayerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

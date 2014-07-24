@@ -11,9 +11,11 @@ import Foundation
 class Player {
     
     var given_name : String?
+    var image_name : String?
     
     init(data: Dictionary<String,AnyObject>) {
         given_name = data["given_name"]! as? String
+        image_name = data["image_name"]! as? String
     }
     
     class func setObjectsWithTeamWithClosure(team: String,closure: ((data:[AnyObject]) -> ())?) {
